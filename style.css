@@ -1,199 +1,169 @@
-/* Стилі для всіх елементів */
+/* Общие стили */
 body {
     font-family: Arial, sans-serif;
-    background-color: #000;
-    color: white;
-    text-align: center;
+    line-height: 1.6;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
-/* Меню навігації */
-nav ul {
+/* Навигация */
+nav {
     background-color: #333;
-    padding: 10px 0;
+    color: #fff;
+    padding: 1em;
+}
+
+nav ul {
+    list-style: none;
     margin: 0;
-    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0 1em;
 }
 
 nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: white;
-    font-size: 1.2em;
 }
 
 nav ul li a:hover {
-    color: #4CAF50;
+    text-decoration: underline;
 }
 
-/* Заголовки секцій */
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: #222;
-    border-radius: 8px;
+.special {
+    background-color: #444;
+    padding: 0.5em 1em;
+    border-radius: 5px;
 }
 
-/* Стиль для зображення */
-.photo {
+/* Главная секция */
+#home {
+    text-align: center;
+    padding: 2em 0;
+    background-color: #e2e2e2;
+}
+
+#home h1 {
+    color: #333;
+}
+
+#home p {
+    color: #555;
+}
+
+/* Секция "Обо мне" */
+#about {
+    padding: 2em;
+    background-color: #fff;
+    text-align: center;
+}
+
+#about .photo {
     width: 150px;
-    height: 150px;
-    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 1em;
 }
 
-/* Стилі для посилань */
-ul {
+#about p {
+    color: #333;
+}
+
+/* Секция "Лабораторные" */
+#labs {
+    padding: 2em;
+    background-color: #f9f9f9;
+}
+
+#labs h2 {
+    text-align: center;
+}
+
+#labs ul {
     list-style-type: none;
     padding: 0;
-}
-
-ul li {
-    padding: 5px 0;
-}
-
-ul li a {
-    text-decoration: none;
-    color: #4CAF50;
-}
-
-ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Таблиця */
-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 10px;
-    background-color: #222;
-    color: white;
     text-align: center;
-    margin: 20px 0;
 }
 
-thead {
-    background-color: #333;
-    color: #FF6347;
+#labs ul li {
+    margin: 0.5em 0;
 }
 
-th, td {
-    padding: 10px;
-    border: 1px solid #555;
+#labs ul li a {
+    text-decoration: none;
+    color: #007bff;
 }
 
-tbody tr {
-    background-color: #333;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #444;
-}
-
-tbody tr:hover {
-    background-color: #555;
-}
-
-tbody tr.highlight {
-    background-color: #FF6347;
-    color: black;
-}
-
-/* Сепаратор дня */
-tbody .day-separator {
-    background-color: #555;
-    color: #FF6347;
-    font-weight: bold;
-}
-
-tbody .day-separator td {
-    text-align: left;
-    padding: 10px 0;
-}
-
-/* Завдання */
-
-/* 1. Виділення першого <li> */
-li:first-child {
-    font-weight: bold;
-}
-
-/* 2. Останні елементи <a> */
-a:last-child {
-    color: red;
-}
-
-/* 3. Вимкнені (disabled) input */
-input:disabled {
-    background-color: grey;
-}
-
-/* 4. Прямі дочірні <p> у <div> */
-div > p {
-    font-weight: bold;
-}
-
-/* 5. Посилання з href, що починаються з https */
-a[href^="https"] {
-    color: green;
-}
-
-/* 6. Input типу text з рамкою */
-input[type="text"] {
-    border: 1px solid blue;
-}
-
-/* 7. Перші та останні <li> з шрифтом 24px */
-li:first-child, li:last-child {
-    font-size: 24px;
-}
-
-/* 8. Усі нащадки <p> у <div> */
-div p {
-    font-size: 16px;
-}
-
-/* 9. Checked input */
-input:checked {
-    background-color: lightblue;
-}
-
-/* 10. Прямі дочірні <a> у <li> з підкресленням */
-li > a {
+#labs ul li a:hover {
     text-decoration: underline;
 }
 
-/* 11. Парні <li> */
-li:nth-child(even) {
+/* Секция "Расписание" */
+#schedule {
+    padding: 2em;
+    background-color: #fff;
+}
+
+#schedule h2 {
+    text-align: center;
+}
+
+#schedule table {
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+#schedule th, #schedule td {
+    padding: 0.75em;
+    text-align: center;
+}
+
+#schedule th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#schedule tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+#schedule .highlight {
+    background-color: #f7dc6f;
+}
+
+#schedule .day-separator {
+    background-color: #007bff;
+    color: #fff;
     font-weight: bold;
 }
 
-/* 12. Input типу text, який не disabled */
-input[type="text"]:not(:disabled) {
-    background-color: grey;
+/* Секция "Контакты" */
+#contacts {
+    padding: 2em;
+    background-color: #e2e2e2;
+    text-align: center;
 }
 
-/* 13. Перші дочірні <p> */
-p:first-child {
-    font-size: 24px;
+#contacts p {
+    font-size: 1.2em;
 }
 
-/* 14. <li>, що йде після .special */
-.special + li {
-    text-decoration: line-through;
-}
+/* Медиа-запросы */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
 
-/* 15. Перша літера кожного <p> */
-p::first-letter {
-    font-size: 36px;
-}
+    #about .photo {
+        width: 100px;
+    }
 
-/* 16. Псевдоелемент ::after для <a> */
-a::after {
-    content: " ↗";
+    #schedule table {
+        font-size: 0.9em;
+    }
 }
